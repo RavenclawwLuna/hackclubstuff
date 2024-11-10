@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+        function checkAnswers() {
+            const answers = ["yes", "no", "no", "yes", "no"];
+            const userAnswers = document.querySelectorAll('input[type="radio"]:checked');
+            let correct = 0;
+
+            for (let i = 0; i < userAnswers.length; i++) {
+                if (userAnswers[i].value === answers[i]) {
+                    correct++;
+                } else {
+                }
+            }
+
+            alert(`You got ${correct} out of 5 correct!`);
+        }
+    </script>
 </head>
 
 <style>
@@ -116,6 +132,32 @@ background: white;
 <a href="https://www.buzzfeed.com/visionarybook283/what-kind-of-bird-are-you-b5v05xmbms">
 <button>Very Short and Fun Quiz</button>
 </a>
+
+<h3> Can you tell which foods are safe for birds??</h3>
+
+    <form>
+        <p>1. Can budgies eat apples?</p>
+        <input type="radio" name="q1" value="yes"> Yes<br>
+        <input type="radio" name="q1" value="no"> No<br>
+        
+        <p>2. Can budgies eat chocolate?</p>
+        <input type="radio" name="q2" value="yes"> Yes<br>
+        <input type="radio" name="q2" value="no"> No<br>
+        
+        <p>3. Can budgies eat bread?</p>
+        <input type="radio" name="q3" value="yes"> Yes<br>
+        <input type="radio" name="q3" value="no"> No<br>
+        
+        <p>4. Can budgies eat lettuce?</p>
+        <input type="radio" name="q4" value="yes"> Yes<br>
+        <input type="radio" name="q4" value="no"> No<br>
+        
+        <p>5. Can budgies eat avacado?</p>
+        <input type="radio" name="q5" value="yes"> Yes<br>
+        <input type="radio" name="q5" value="no"> No<br>
+
+        <input type="button" value="Submit" onclick="checkAnswers()">
+    </form>
 
 <h3>Just a Bunch of cute Images!!</h3>
 <img src="https://i.pinimg.com/originals/68/df/4c/68df4cf1105eb10bb6dd6089f3d06a5f.jpg" 
