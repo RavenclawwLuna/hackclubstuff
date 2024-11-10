@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <script>
-         function checkAnswers() {
+        function checkAnswers() {
             const answers = ["yes", "no", "no", "yes", "no"];
             const userAnswers = document.querySelectorAll('input[type="radio"]:checked');
             let correct = 0;
@@ -15,7 +14,7 @@
                 }
             }
 
-            alert(`You got ${correct} out of 5 correct!`);
+            alert(`You got ${correct} out of 5 correct! Budgies can eat apples and lettuce but they can't eat bread, chocolate or avacados.`);
         }
     </script>
 </head>
@@ -25,6 +24,11 @@ body {
 text-align: center;
 font-family: Times;
 img: center;
+
+img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 
 background-color: #f0f0f0;
             animation: colorChange 15s infinite;
