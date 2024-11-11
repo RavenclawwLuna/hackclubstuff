@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -119,6 +120,33 @@ background: white;
   </tr>
 </table>
 
+<h3>Search a food</h3>
+
+<form>
+<label for="foodInput">Enter a food:</label>
+<input type="text" id="foodInput" name="food">
+<button type="button" onclick="checkFood()">Check</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+function checkFood() {
+const foodInput = document.getElementById("foodInput").value.toLowerCase();
+const resultDiv = document.getElementById("result");
+
+if (foodInput === "apple" || foodInput === "pear" || foodInput === "carrot") {
+resultDiv.textContent = "Yes, budgies can eat " + foodInput;
+} else if (foodInput === "chocolate" || foodInput === "avocado") {
+resultDiv.textContent = "No, budgies should not eat " + foodInput;
+} else {
+resultDiv.textContent = "I'm not sure about that food.";
+}
+}
+</script>
+
+
+
 <h3>Health and Wellness</h3>
 <p>𝐒𝐚𝐟𝐞 𝐄𝐧𝐯𝐢𝐫𝐨𝐧𝐦𝐞𝐧𝐭: Protect your budgie and keep it away from harm. Don't give it toxic substances or put them in extreme temperatures.</p>
 
@@ -203,3 +231,4 @@ background: white;
 </body>
 
 </html>
+
